@@ -63,6 +63,18 @@ export class CalculadoraComponent implements OnInit {
   		this.resultado = null;
   	}
     
+    
   }
+
+  get display(): string {
+  	if (this.resultado !== null) {
+  		return this.resultado.toString();
+  	}
+  	if (this.numero2 !== null) {
+  		return this.numero2;
+  	}
+  	return this.numero1;
+  }
+
 
 }
