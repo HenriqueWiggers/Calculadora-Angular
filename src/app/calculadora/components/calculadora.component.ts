@@ -63,7 +63,17 @@ export class CalculadoraComponent implements OnInit {
   		this.resultado = null;
   	}
     
-    
+  }
+
+    calcular(): void {
+  	if (this.numero2 === null) {
+  		return;
+  	}
+
+  	this.resultado = this.calculadoraService.calcular(
+  		parseFloat(this.numero1), 
+  		parseFloat(this.numero2), 
+  		this.operacao);
   }
 
   get display(): string {
